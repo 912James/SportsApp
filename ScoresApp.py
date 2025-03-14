@@ -12,12 +12,11 @@ class ScoreFetcher:
         logging.basicConfig(filename='score_fetcher.log', level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s')
         
-        # Base URLs for ESPN - I included the main site URL
+        # Base URLs for ESPN
         self.espn_base_url = "https://www.espn.com"
         self.api_base_url = "https://site.api.espn.com/apis/site/v2/sports"
         
         # List of leagues mapped to their specific fetch methods
-        # TODO: This feels a bit repetitive - maybe I can simplify this later?
         self.supported_leagues = {
             "nfl": self.get_nfl_scores,
             "nba": self.get_nba_scores,
@@ -59,7 +58,7 @@ class ScoreFetcher:
             'Accept': 'application/json',
         }
 
-    # This method fetches scores for a given league
+    # Fetches scores for a given league
     def get_scores(self, league, date_str=None):
         # Make sure the league name is lowercase to avoid case issues
         league = league.lower()
