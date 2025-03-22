@@ -1,66 +1,44 @@
-# SportsApp
-Sports App Project
+# Sports Score Tracker
 
-The Sports Score App is a desktop application that fetches sports scores from the ESPN API and displays them in a user-friendly GUI. You can select your league, pick a date, filter games by status (live, scheduled, final), and even dive into detailed box scores for individual games.
+A desktop app that fetches live sports scores and box scores from the ESPN API, built with Python and a Tkinter GUI. Select a league, pick a date, filter games, and dive into detailed stats—all in one sleek interface.
 
-Features
-Wide League Support: Fetch scores from a variety of leagues, including NFL, NBA, MLB, NHL, MLS, Premier League, La Liga, Bundesliga, Serie A, Ligue 1, UEFA Champions League, UEFA Europa League, NCAA Football, and NCAA Men's Basketball.
 
-Date Selection: View scores for any date—past, present, or future (well, scheduled games, at least!).
+## Features
+- Wide League Support: Covers 14 leagues—NFL, NBA, MLB, NHL, MLS, Premier League, La Liga, Bundesliga, Serie A, Ligue 1, UEFA Champions/Europa Leagues, NCAA Football, and Men’s Basketball.
+- Date Flexibility: Fetch scores for any date-past games, today’s action, or scheduled matchups.
+- Game Filtering: View all games or filter by status (Live, Scheduled, Final).
+- Box Scores: Detailed team and player stats in a tabbed, scrollable UI.
+- Sortable Table: Click headers to sort by team, score, status, etc.
+- Robust Design: Handles network errors, invalid inputs, and logs activity to score_fetcher.log.
 
-Game Filtering: Filter games by status—see all games, or just live, scheduled, or final ones.
+## Tech Stack
+- Languages: Python
+- Libraries: requests (API calls), pytz (timezones), tkinter (GUI), json (parsing)
+- Tools: ESPN API, logging for debugging
 
-Detailed Box Scores: Dive into team and player stats for any game, displayed in a neat tabbed interface.
 
-Sortable Results: Sort the game table by any column (e.g., team names, scores, status) with a click.
+## Installation
+### Prerequisites
+- Python 3.6+
+- pip (updated: pip install --upgrade pip)
 
-Error Handling: Graceful handling of network errors, invalid dates, and unsupported leagues, with helpful error messages.
 
-Logging: Keeps a log of API calls and errors in score_fetcher.log for debugging.
+### Steps
+1. Clone the Repo  
+   bash    git clone https://github.com/912James/SportsApp.git    cd SportsApp    
+2. Install Dependencies  
+   bash    pip install requests pytz    
+3. Run It  
+   bash    python score_app.py    
 
-Installation
 
-Prerequisites
-Python 3.6+
+## Usage
+1. Pick a League: Choose from the dropdown (e.g., NBA, Premier League).
+2. Set a Date: Enter YYYY-MM-DD (defaults to today, Eastern Time).
+3. Filter Games: Select “All,” “Live,” “Scheduled,” or “Final.”
+4. Fetch Scores: Hit “Fetch Scores” to populate the table.
+5. View Box Scores: Pick a game, click “View Box Score” for stats.
 
-pip: Comes with Python, ensure it's up to date by running 
-- pip install --upgrade pip.
 
-Steps
-Clone the Repository
-Grab the code from GitHub:
-
-bash
-git clone https://github.com/your-username/sports-score-app.git
-cd sports-score-app
-
-Install Dependencies
-
-bash
-pip install requests pytz
-
-Run the App
-
-bash
-python scores_app.py
-
-Usage
-Once the app is running, here's how to use it:
-Select a League
-Use the "Select League" dropdown to pick your favorite league (e.g., NFL, NBA, Premier League).
-
-Choose a Date
-Enter a date in YYYY-MM-DD format in the "Select Date" field to view scores for that day.
-
-Filter Games
-Use the "Filter" dropdown to show only "Live," "Scheduled," "Final," or "All" games.
-
-Fetch Scores
-Click the "Fetch Scores" button to grab the latest scores. The results will appear in a sortable table below.
-
-View Box Scores
-Select a game from the "Select Game" dropdown and click "View Box Score" to see detailed stats.
-
-License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it as you see fit—just give credit where credit is due!
-
+## Why It’s Cool
+Built to scratch my sports itch, this app pulls real-time data from ESPN, processes it with Python, and delivers a clean GUI experience. It’s a practical showcase of API integration, data parsing, and user-focused design—skills.
